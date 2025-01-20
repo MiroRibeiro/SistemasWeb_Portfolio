@@ -178,12 +178,12 @@ header{
 
 .banner h1 {
     color: white;
-    font-size: 3.5rem;  
+    font-size: 3.0rem;  
     font-family: var(--font-tertiary);
     font-weight: 300;
     text-transform: uppercase;
     text-shadow: .3rem .4rem 2px rgba(0, 0, 0, 0.404);
-    line-height: 3.5rem;
+    line-height: 3.0rem;
     opacity: 0;
     animation: moveBanner 0.5s forwards;
     
