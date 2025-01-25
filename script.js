@@ -28,8 +28,8 @@ function atualizarPreco(){
 
     let preco = qtde * 100;
     if (temJS) preco *= 1.1
-    if (incluiLayout) preco += 500
-    let taxaUrgencia = 1 + prazo*0.35;
+    if (incluiLayout) preco += 50
+    let taxaUrgencia = 1 + prazo*2;
     preco *= 1 + taxaUrgencia
 
     document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
