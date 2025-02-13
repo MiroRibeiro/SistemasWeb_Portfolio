@@ -78,8 +78,19 @@ if(target.length) {
     },10))
 }
 
+document.getElementById('formulario').addEventListener('submit', async(event) =>{
+    event.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
 
-
-
-
-
+    const resposta = await fetch('http://localhost:3000/salvar', {
+        method:'POST', 
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({nome, email, mensagem})
+    });
+    const dados = await resposta.json();
+      document.getElementById('resposta').textContent = JSON.stringify(dados, null, 2);
+});
